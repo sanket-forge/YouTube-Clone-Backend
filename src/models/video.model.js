@@ -54,6 +54,6 @@ const videoSchema = new Schema({
     }
 }, {timestamps: true})
 
-videoSchema.plugin(mongooseAggregatePaginate)
+videoSchema.plugin(mongooseAggregatePaginate) // used to add pagination(sending the data in small chunks)
 
 export const Video = mongoose.model('Video', videoSchema)
